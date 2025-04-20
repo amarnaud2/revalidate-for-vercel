@@ -1,4 +1,4 @@
-=== Vercel Revalidate ===
+=== Revalidate for Vercel ===
 Contributors: arnaudmartin
 Tags: nextjs, vercel, isr, revalidate, static
 Requires at least: 5.5
@@ -30,7 +30,7 @@ Ideal if you're using `getStaticProps` with `revalidate` in your Next.js app.
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu.
-3. Go to **Settings > Vercel Revalidate** and configure your secret and endpoint URL.
+3. Go to **Settings > Revalidate for Vercel** and configure your secret and endpoint URL.
 4. Ensure your Next.js app has an API route like `/api/revalidate` that validates the secret and triggers ISR.
 
 == Frequently Asked Questions ==
@@ -49,6 +49,9 @@ Yes. The plugin works in the background and doesn’t interfere with any fronten
 
 = Can I clear the logs? =
 Yes, the Logs page allows you to view and delete all revalidation history.
+
+= Is this plugin an official plugin from Vercel? =
+No, it's not affiliated with Vercel.
 
 == Screenshots ==
 1. Settings page to configure endpoint and secret

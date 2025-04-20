@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PLUGIN_SLUG="vercel-revalidate"
-ZIP_NAME="$PLUGIN_SLUG.1.4.zip"
+PLUGIN_SLUG="revalidate-for-vercel"
+ZIP_NAME="$PLUGIN_SLUG.1.5.zip"
 
 # Directories
 BUILD_DIR="build"

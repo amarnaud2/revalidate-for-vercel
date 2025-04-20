@@ -1,15 +1,15 @@
 <?php
 
-add_action('save_post', 'vercel_revalidate_on_post_update', 10, 3);
+add_action('save_post', 'revalidate_for_vercel_on_post_update', 10, 3);
 
-function vercel_revalidate_on_post_update($post_ID, $post, $update) {
+function revalidate_for_vercel_on_post_update($post_ID, $post, $update) {
     if ($post->post_type !== 'post' || $post->post_status !== 'publish') {
         return;
     }
 
     $slug = $post->post_name;
-    $secret = get_option('vercel_revalidate_secret');
-    $endpoint = get_option('vercel_revalidate_url');
+    $secret = get_option('revalidate_for_vercel_secret');
+    $endpoint = get_option('revalidate_for_vercel_url');
 
     if (!$secret || !$endpoint) {
         return;
@@ -30,15 +30,15 @@ function vercel_revalidate_on_post_update($post_ID, $post, $update) {
     ]);
 
     $status = is_wp_error($response) ? 'Error' : 'Success';
-    vercel_revalidate_log_event($slug, $status);
+    revalidate_for_vercel_log_event($slug, $status);
 }
 
-function vercel_revalidate_log_event($slug, $status) {
-    $logs = get_option('vercel_revalidate_logs', []);
+function revalidate_for_vercel_log_event($slug, $status) {
+    $logs = get_option('revalidate_for_vercel_logs', []);
     $logs[] = [
         'time'   => current_time('mysql'),
         'slug'   => $slug,
         'status' => $status,
     ];
-    update_option('vercel_revalidate_logs', $logs);
+    update_option('revalidate_for_vercel_logs', $logs);
 }

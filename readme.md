@@ -1,12 +1,13 @@
-# Vercel Revalidate – WordPress Plugin for Next.js ISR
+# Revalidate for Vercel – WordPress Plugin for Next.js ISR
 
 ![Version](https://img.shields.io/badge/version-1.5-blue.svg)
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-8892BF?logo=php)
 ![WordPress](https://img.shields.io/badge/tested%20up%20to-6.7-blue)
 ![License](https://img.shields.io/badge/license-GPLv2-blue)
-![Build](https://github.com/amarnaud2/vercel-revalidate/actions/workflows/build-release.yml/badge.svg)
+![Build](https://github.com/amarnaud2/revalidate-for-vercel/actions/workflows/build-release.yml/badge.svg)
 
 Trigger ISR (Incremental Static Regeneration) from WordPress to Vercel on post update. Built for headless WordPress + Next.js.
+This plugin is not affiliated with Vercel.
 
 ---
 
@@ -25,9 +26,9 @@ Trigger ISR (Incremental Static Regeneration) from WordPress to Vercel on post u
 
 ## 🛠 Installation
 
-1. Upload the plugin folder to `/wp-content/plugins/vercel-revalidate`
+1. Upload the plugin folder to `/wp-content/plugins/revalidate-for-vercel`
 2. Activate via the WordPress admin
-3. Go to `Settings > Vercel Revalidate`
+3. Go to `Settings > Revalidate for Vercel`
 4. Enter your revalidation endpoint and shared secret
 5. Ensure your Next.js app has a secure `/api/revalidate` endpoint (see Help tab)
 

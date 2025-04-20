@@ -13,7 +13,7 @@ jobs:
     name: 🛠️ Build Plugin ZIP on Tag
     runs-on: ubuntu-latest
     env:
-      PLUGIN_SLUG: vercel-revalidate
+      PLUGIN_SLUG: revalidate-for-vercel
       RELEASE_TAG: ${{ github.ref_name }}
 
     steps:
@@ -27,7 +27,7 @@ jobs:
 
       - name: 🌐 Set environment vars
         run: |
-          echo "PLUGIN_SLUG=vercel-revalidate" >> $GITHUB_ENV
+          echo "PLUGIN_SLUG=revalidate-for-vercel" >> $GITHUB_ENV
           echo "RELEASE_TAG=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
       - name: 🧹 Clean up files
@@ -78,9 +78,9 @@ jobs:
       - name: 🚀 Upload release to GitHub
         uses: softprops/action-gh-release@v1
         with:
-          name: Vercel Revalidate ${{ env.RELEASE_TAG }}
+          name: Revalidate for Vercel ${{ env.RELEASE_TAG }}
           tag_name: ${{ env.RELEASE_TAG }}
-          files: vercel-revalidate.${{ env.RELEASE_TAG }}.zip
+          files: revalidate-for-vercel.${{ env.RELEASE_TAG }}.zip
           body: |
             ✅ Automated release from GitHub Actions
             See the changelog and documentation in README.md
