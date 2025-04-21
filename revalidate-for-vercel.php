@@ -15,7 +15,9 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-// Load translations
+/**
+ * Load the plugin text domain for translations.
+ */
 function revalidate_for_vercel_load_textdomain() {
     load_plugin_textdomain('revalidate-for-vercel', false, dirname(plugin_basename(__FILE__)) . '/languages');
 }

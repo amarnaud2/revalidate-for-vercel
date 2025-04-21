@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Help page for the Revalidate for Vercel plugin.
+ *
+ * @package RevalidateForVercel
+ */
 function revalidate_for_vercel_admin_menu() {
     add_menu_page(
         'Revalidate for Vercel',
@@ -13,6 +18,9 @@ function revalidate_for_vercel_admin_menu() {
 }
 add_action('admin_menu', 'revalidate_for_vercel_admin_menu');
 
+/**
+ * Callback function for the Revalidate for Vercel settings page.
+ */
 function revalidate_for_vercel_settings_page() {
     ?>
     <div class="wrap">
@@ -72,6 +80,9 @@ function revalidate_for_vercel_settings_page() {
     <?php
 }
 
+/**
+ * Register settings for the Revalidate for Vercel plugin.
+ */
 function revalidate_for_vercel_secret_args() {
     return [
         'sanitize_callback' => 'sanitize_text_field',
@@ -80,6 +91,9 @@ function revalidate_for_vercel_secret_args() {
     ];
 }
 
+/** 
+ * Register settings for the Revalidate for Vercel plugin.
+ */
 function revalidate_for_vercel_url_args() {
     return [
         'sanitize_callback' => 'esc_url_raw',
@@ -88,6 +102,9 @@ function revalidate_for_vercel_url_args() {
     ];
 }
 
+/**
+ * Register settings for the Revalidate for Vercel plugin.
+ */
 function revalidate_for_vercel_register_settings() {
     register_setting('revalidate_for_vercel_settings', 'revalidate_for_vercel_secret', revalidate_for_vercel_secret_args());
     register_setting('revalidate_for_vercel_settings', 'revalidate_for_vercel_url', revalidate_for_vercel_url_args());
@@ -117,11 +134,17 @@ function revalidate_for_vercel_register_settings() {
 }
 add_action('admin_init', 'revalidate_for_vercel_register_settings');
 
+/**
+ * Render the Revalidation Secret input field.
+ */
 function revalidate_for_vercel_secret_render() {
     $value = get_option('revalidate_for_vercel_secret');
     echo "<input type='text' name='revalidate_for_vercel_secret' value='" . esc_attr($value) . "' class='regular-text' />";
 }
 
+/**
+ * Render the Revalidation Endpoint URL input field.
+ */
 function revalidate_for_vercel_url_render() {
     $value = get_option('revalidate_for_vercel_url');
     echo "<input type='text' name='revalidate_for_vercel_url' value='" . esc_attr($value) . "' class='regular-text' />";

@@ -51,7 +51,7 @@ jobs:
       - name: 🔍 Run WP Plugin Check
         run: |
           cd /tmp/plugin-check
-          php plugincheck.php "$GITHUB_WORKSPACE/build/$PLUGIN_SLUG"
+             "$GITHUB_WORKSPACE/build/$PLUGIN_SLUG"
 
       - name: 📦 Create ZIP archive
         run: |

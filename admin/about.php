@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * About page for the Revalidate for Vercel plugin.
+ */
 function revalidate_for_vercel_about_menu() {
     add_submenu_page(
         'revalidate-for-vercel',
@@ -12,6 +15,9 @@ function revalidate_for_vercel_about_menu() {
 }
 add_action('admin_menu', 'revalidate_for_vercel_about_menu');
 
+/**
+ * Callback function for the About page.
+ */
 function revalidate_for_vercel_about_page() {
     ?>
     <div class="wrap">

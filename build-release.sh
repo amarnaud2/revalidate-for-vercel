@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script packages the plugin for WordPress.org
+# It creates a zip file containing the plugin code, excluding unnecessary files
+# and directories, and renames the readme file for WordPress.
 PLUGIN_SLUG="revalidate-for-vercel"
 ZIP_NAME="$PLUGIN_SLUG.1.5.zip"
 

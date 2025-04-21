@@ -55,8 +55,9 @@ No, it's not affiliated with Vercel.
 
 == Screenshots ==
 1. Settings page to configure endpoint and secret
-2. Logs with time, slug, and status
+2. Settings page after a manual triggering using a slug
 3. Help and Integration tab
+4. Logs with time, slug, and status
 
 == Changelog =
 

@@ -47,13 +47,16 @@ All included in the plugin's **Help & Integration** tab 🧩
 ## 🖼️ Screenshots
 
 ### 1. Plugin Settings
-![Plugin Settings](./assets/screenshot-1.webp)
+![Plugin Settings](./assets/screenshot-1.png)
 
-### 2. Revalidation Logs
-![Revalidation Logs](./assets/screenshot-2.webp)
+### 2. Plugin Settings after triggering a manual refresh using a slug
+![Plugin Settings](./assets/screenshot-2.png)
 
 ### 3. Help & Integration Tab
-![Integration Help](./assets/screenshot-3.webp)
+![Integration Help](./assets/screenshot-3.png)
+
+### 4. Revalidation Logs
+![Revalidation Logs](./assets/screenshot-4.png)
 
 ---
 

@@ -83,6 +83,6 @@ jobs:
           files: revalidate-for-vercel.${{ env.RELEASE_TAG }}.zip
           body: |
             ✅ Automated release from GitHub Actions
-            See the changelog and documentation in README.md
+            See the changelog and documentation in README.md 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Help page for the Revalidate for Vercel plugin.
+ *
+ * @package RevalidateForVercel
+ */
 function revalidate_for_vercel_logs_menu() {
     add_submenu_page(
         'revalidate-for-vercel',
@@ -12,6 +17,9 @@ function revalidate_for_vercel_logs_menu() {
 }
 add_action('admin_menu', 'revalidate_for_vercel_logs_menu');
 
+/**
+ * Callback function for the Logs page.
+ */
 function revalidate_for_vercel_logs_page() {
     $logs = get_option('revalidate_for_vercel_logs', []);
     ?>
@@ -69,7 +77,9 @@ function revalidate_for_vercel_logs_page() {
     <?php
 }
 
-// Admin menu badge for errors
+/**
+ * Add a bubble to the admin menu if there are errors in the logs.
+ */
 function revalidate_for_vercel_admin_bubble($menu) {
     $logs = get_option('revalidate_for_vercel_logs', []);
     $errors = array_filter($logs, function($log) {
@@ -88,7 +98,7 @@ function revalidate_for_vercel_admin_bubble($menu) {
 }
 add_filter('add_menu_classes', 'revalidate_for_vercel_admin_bubble');
 
-// Send email alert on error
+// Send email alert on error (not ready yet)
 /*
 function revalidate_for_vercel_log_event($slug, $status) {
     $logs = get_option('revalidate_for_vercel_logs', []);

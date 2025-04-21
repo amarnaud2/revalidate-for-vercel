@@ -2,6 +2,9 @@
 
 add_action('save_post', 'revalidate_for_vercel_on_post_update', 10, 3);
 
+/**
+ * Trigger revalidation on post update.
+ */
 function revalidate_for_vercel_on_post_update($post_ID, $post, $update) {
     if ($post->post_type !== 'post' || $post->post_status !== 'publish') {
         return;
@@ -33,6 +36,9 @@ function revalidate_for_vercel_on_post_update($post_ID, $post, $update) {
     revalidate_for_vercel_log_event($slug, $status);
 }
 
+/**
+ * Log revalidation events.
+ */
 function revalidate_for_vercel_log_event($slug, $status) {
     $logs = get_option('revalidate_for_vercel_logs', []);
     $logs[] = [

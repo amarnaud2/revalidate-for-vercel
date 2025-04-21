@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Help page for the Revalidate for Vercel plugin.
+ *
+ * @package RevalidateForVercel
+ */
 function revalidate_for_vercel_help_menu() {
     add_submenu_page(
         'revalidate-for-vercel',
@@ -12,6 +17,9 @@ function revalidate_for_vercel_help_menu() {
 }
 add_action('admin_menu', 'revalidate_for_vercel_help_menu');
 
+/**
+ * Callback function for the Help page.
+ */
 function revalidate_for_vercel_help_page() {
     ?>
     <div class="wrap">
