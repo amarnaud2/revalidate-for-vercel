@@ -2,7 +2,7 @@
 Contributors: amarnaud2
 Tags: nextjs, vercel, isr, revalidate, static
 Requires at least: 5.5
-Tested up to: 6.7
+Tested up to: 6.8
 Stable tag: 1.5
 Requires PHP: 7.4
 Tested up to PHP: 8.2
