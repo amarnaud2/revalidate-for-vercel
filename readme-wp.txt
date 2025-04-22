@@ -1,5 +1,5 @@
 === Revalidate for Vercel ===
-Contributors: arnaudmartin
+Contributors: amarnaud2
 Tags: nextjs, vercel, isr, revalidate, static
 Requires at least: 5.5
 Tested up to: 6.7
